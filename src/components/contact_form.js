@@ -5,8 +5,8 @@ class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.reset = this.reset.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+    // this.reset = this.reset.bind(this);
     this.state = {
       form: {
         firstName: "",
@@ -24,13 +24,13 @@ class ContactForm extends Component {
     this.setState({ form: { ...form } });
   }
 
-  handleSubmit(event) {
+  handleSubmit = event => {
     event.preventDefault();
     this.props.add(this.state.form);
     this.reset();
-  }
+  };
 
-  reset() {
+  reset = () => {
     this.setState({
       form: {
         firstName: "",
@@ -39,7 +39,7 @@ class ContactForm extends Component {
         email: ""
       }
     });
-  }
+  };
   render() {
     const { firstName, lastName, phone, email } = this.state.form;
     return (
