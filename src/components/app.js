@@ -1,11 +1,11 @@
 import React from "react";
-import MovieContainer from "./movie_container";
+import Clock from "../components/clock";
 
 export default props => {
 	return (
 		<div className="container">
-			<h1 className="text-center">Axios Demo</h1>
-			<MovieContainer />
+			<h1 className="text-center">Redux Clock</h1>
+			<Clock />
 		</div>
 	);
 };
